@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="2344" started-at="2017-12-11T09:43:09Z" finished-at="2017-12-11T09:43:11Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="2344" started-at="2017-12-11T09:43:09Z" finished-at="2017-12-11T09:43:11Z">
+      <class name="com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure">
+        <test-method status="PASS" signature="testMToCm()[pri:0, instance:testMToCm(com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure)]" name="testMToCm" duration-ms="592" started-at="2017-12-11T10:43:09Z" finished-at="2017-12-11T10:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMToCm -->
+        <test-method status="PASS" signature="testMToKm()[pri:0, instance:testMToKm(com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure)]" name="testMToKm" duration-ms="298" started-at="2017-12-11T10:43:09Z" finished-at="2017-12-11T10:43:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMToKm -->
+        <test-method status="PASS" signature="testMToMm()[pri:0, instance:testMToMm(com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure)]" name="testMToMm" duration-ms="248" started-at="2017-12-11T10:43:10Z" finished-at="2017-12-11T10:43:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMToMm -->
+        <test-method status="PASS" signature="testMToM()[pri:0, instance:testMToM(com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure)]" name="testMToM" duration-ms="253" started-at="2017-12-11T10:43:10Z" finished-at="2017-12-11T10:43:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMToM -->
+        <test-method status="PASS" signature="testMToFoot()[pri:0, instance:testMToFoot(com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure)]" name="testMToFoot" duration-ms="233" started-at="2017-12-11T10:43:10Z" finished-at="2017-12-11T10:43:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMToFoot -->
+        <test-method status="PASS" signature="testMToInch()[pri:0, instance:testMToInch(com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure)]" name="testMToInch" duration-ms="160" started-at="2017-12-11T10:43:10Z" finished-at="2017-12-11T10:43:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMToInch -->
+        <test-method status="PASS" signature="testMToMile()[pri:0, instance:testMToMile(com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure)]" name="testMToMile" duration-ms="145" started-at="2017-12-11T10:43:11Z" finished-at="2017-12-11T10:43:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMToMile -->
+        <test-method status="PASS" signature="testMToYard()[pri:0, instance:testMToYard(com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure)]" name="testMToYard" duration-ms="127" started-at="2017-12-11T10:43:11Z" finished-at="2017-12-11T10:43:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMToYard -->
+        <test-method status="PASS" signature="testSetGetInputValue()[pri:0, instance:testSetGetInputValue(com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure)]" name="testSetGetInputValue" duration-ms="45" started-at="2017-12-11T10:43:11Z" finished-at="2017-12-11T10:43:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetGetInputValue -->
+      </class> <!-- com.example.maven.measurement_calculator_annamajal.TestCalculateMeasure -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

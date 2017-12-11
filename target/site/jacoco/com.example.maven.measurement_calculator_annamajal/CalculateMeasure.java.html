@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculateMeasure.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">measurement-calculator-annamajal</a> &gt; <a href="index.source.html" class="el_package">com.example.maven.measurement_calculator_annamajal</a> &gt; <span class="el_source">CalculateMeasure.java</span></div><h1>CalculateMeasure.java</h1><pre class="source lang-java linenums">/***
+ * CalculateMeasure
+ * 
+ * klassen CalculateMeasure i projektet measurement-calculator-annamajal
+ * samlar alla metoder som sen används i GUI. 
+ * 
+ * @author Anna-Maja Lithner  
+ * @version 1.0
+ * @date 2017-12-06
+ */
+
+package com.example.maven.measurement_calculator_annamajal;
+
+import java.text.DecimalFormat;
+
+<span class="fc" id="L16">public class CalculateMeasure implements InterfaceCalculateMeasure {</span>
+
+	// attribute for the class
+<span class="fc" id="L19">	double inputValue = 0.0;</span>
+<span class="fc" id="L20">	double result = 0.0;</span>
+
+	/**
+	 * 
+	 * @param inputValue
+	 *            inmatning från tangentbord i textfält tfInput i klassen
+	 *            GUICalculateMeasure
+	 */
+	public void setInputValue(double inputValue) {
+<span class="fc" id="L29">		this.inputValue = inputValue;</span>
+<span class="fc" id="L30">	}</span>
+
+	/**
+	 * 
+	 * @return inputValue
+	 */
+	public double getInputValue() {
+<span class="fc" id="L37">		return inputValue;</span>
+	}
+
+	// beräkningsmetoder
+	/**
+	 * implementation av metoden mToMm() från interface. Metoden räknar om ett värde
+	 * i meter till millimeter.
+	 * 
+	 * @return result
+	 */
+	public double mToMm(double inputValue) {
+<span class="fc" id="L48">		DecimalFormat df = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L49">		result = inputValue * 1000;</span>
+<span class="fc" id="L50">		return Double.parseDouble(df.format(result));</span>
+
+	}
+
+	/**
+	 * implementation av metoden mToCm() från interface. Metoden räknar om ett värde
+	 * i meter till centimeter.
+	 * 
+	 * @return result
+	 */
+	public double mToCm(double inputValue) {
+<span class="fc" id="L61">		DecimalFormat df = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L62">		result = inputValue * 100;</span>
+<span class="fc" id="L63">		return Double.parseDouble(df.format(result));</span>
+
+	}
+
+	/**
+	 * implementation av metoden mToM() från interface. Metoden genererar samma
+	 * värde som inmatningen.
+	 * 
+	 * @return result
+	 */
+	public double mToM(double inputValue) {
+<span class="fc" id="L74">		DecimalFormat df = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L75">		result = inputValue * 1;</span>
+<span class="fc" id="L76">		return Double.parseDouble(df.format(result));</span>
+	}
+
+	/**
+	 * implementation av metoden mToKm() från interface. Metoden räknar om ett värde
+	 * i meter till kilometer.
+	 * 
+	 * @return result
+	 */
+	public double mToKm(double inputValue) {
+<span class="fc" id="L86">		DecimalFormat df = new DecimalFormat(&quot;#.###&quot;);</span>
+<span class="fc" id="L87">		result = inputValue * 0.001;</span>
+<span class="fc" id="L88">		return Double.parseDouble(df.format(result));</span>
+	}
+
+	/**
+	 * implementation av metoden mToInch() från interface. Metoden räknar om ett
+	 * värde i meter till inch.
+	 * 
+	 * @return result
+	 */
+	public double mToInch(double inputValue) {
+<span class="fc" id="L98">		DecimalFormat df = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L99">		result = inputValue * 39.37;</span>
+<span class="fc" id="L100">		return Double.parseDouble(df.format(result));</span>
+	}
+
+	/**
+	 * implementation av metoden mToFoot() från interface. Metoden räknar om ett
+	 * värde i meter till foot.
+	 * 
+	 * @return result
+	 */
+	public double mToFoot(double inputValue) {
+<span class="fc" id="L110">		DecimalFormat df = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L111">		result = inputValue * 3.281;</span>
+<span class="fc" id="L112">		return Double.parseDouble(df.format(result));</span>
+	}
+
+	/**
+	 * implementation av metoden mToYard() från interface. Metoden räknar om ett
+	 * värde i meter till yard.
+	 * 
+	 * @return result
+	 */
+	public double mToYard(double inputValue) {
+<span class="fc" id="L122">		DecimalFormat df = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L123">		result = inputValue * 1.094;</span>
+<span class="fc" id="L124">		return Double.parseDouble(df.format(result));</span>
+	}
+
+	/**
+	 * implementation av metoden mToMile() från interface. Metoden räknar om ett
+	 * värde i meter till mile.
+	 * 
+	 * @return result
+	 */
+	public double mToMile(double inputValue) {
+<span class="fc" id="L134">		DecimalFormat df = new DecimalFormat(&quot;#.###&quot;);</span>
+<span class="fc" id="L135">		result = inputValue * 0.0006216;</span>
+<span class="fc" id="L136">		return Double.parseDouble(df.format(result));</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

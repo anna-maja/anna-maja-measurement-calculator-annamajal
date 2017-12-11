@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GUICalculateMeasure.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">measurement-calculator-annamajal</a> &gt; <a href="index.source.html" class="el_package">com.example.maven.measurement_calculator_annamajal</a> &gt; <span class="el_source">GUICalculateMeasure.java</span></div><h1>GUICalculateMeasure.java</h1><pre class="source lang-java linenums">/***
+ * GUICalculateMeasure
+ * 
+ * klassen GUICalculateMeasure i projektet measurement-calculator-annamajal
+ * samlar alla metoder som bygger upp GUI. 
+ * 
+ * @author Anna-Maja Lithner  
+ * @version 1.0
+ * @date 2017-12-06
+ */
+package com.example.maven.measurement_calculator_annamajal;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+
+public class GUICalculateMeasure {
+
+	/**
+	 * Constructors - alla konstruktorer för klassen. Skapade globalt för att vara
+	 * nåbara i alla metoder.
+	 */
+<span class="nc" id="L32">	private CalculateMeasure c = new CalculateMeasure();</span>
+<span class="nc" id="L33">	private JFrame frmRknareFrOmvandling = new JFrame();</span>
+
+<span class="nc" id="L35">	private JTextField tfInput = new JTextField();</span>
+<span class="nc" id="L36">	private JTextField tfOutput = new JTextField();</span>
+
+<span class="nc" id="L38">	private JLabel lblInstruction = new JLabel(&quot;Skriv in längden i meter:&quot;);</span>
+<span class="nc" id="L39">	private JLabel lblInstructionChoose = new JLabel(&quot;Välj önskad måttenhet för omräkning.&quot;);</span>
+<span class="nc" id="L40">	private JLabel lblInformation = new JLabel(&quot;Det motsvarar&quot;);</span>
+
+<span class="nc" id="L42">	private JButton btnMm = new JButton(&quot;mm&quot;);</span>
+<span class="nc" id="L43">	private JButton btnCm = new JButton(&quot;cm&quot;);</span>
+<span class="nc" id="L44">	private JButton btnM = new JButton(&quot;m&quot;);</span>
+<span class="nc" id="L45">	private JButton btnKm = new JButton(&quot;km&quot;);</span>
+<span class="nc" id="L46">	private JButton btnInch = new JButton(&quot;inch&quot;);</span>
+<span class="nc" id="L47">	private JButton btnYard = new JButton(&quot;yard&quot;);</span>
+<span class="nc" id="L48">	private JButton btnFoot = new JButton(&quot;foot&quot;);</span>
+<span class="nc" id="L49">	private JButton btnMile = new JButton(&quot;mile&quot;);</span>
+
+	/**
+	 * metoden GUICalculateMeasure - innehåller anrop för metoderna initialize,
+	 * addComponents och addActionListeners.
+	 */
+<span class="nc" id="L55">	public GUICalculateMeasure() {</span>
+<span class="nc" id="L56">		initialize();</span>
+<span class="nc" id="L57">		addComponents();</span>
+<span class="nc" id="L58">		addActionListeners();</span>
+<span class="nc" id="L59">	}</span>
+
+	/**
+	 * metoden initialize - innehåller samtliga setters för alla egenskaper i alla
+	 * enheter (labels, text fields, buttons).
+	 */
+	public void initialize() {
+		// sets properties for frame
+
+<span class="nc" id="L68">		frmRknareFrOmvandling.setBackground(UIManager.getColor(&quot;OptionPane.questionDialog.titlePane.background&quot;));</span>
+<span class="nc" id="L69">		frmRknareFrOmvandling.setTitle(&quot;OMVANDLING AV LÄNGDMÅTT&quot;);</span>
+<span class="nc" id="L70">		frmRknareFrOmvandling.setBounds(100, 100, 450, 436);</span>
+<span class="nc" id="L71">		frmRknareFrOmvandling.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+
+<span class="nc" id="L73">		lblInstruction.setBounds(117, 12, 189, 15);</span>
+
+<span class="nc" id="L75">		tfInput.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L76">		tfInput.setFont(new Font(&quot;Dialog&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L77">		tfInput.setBounds(149, 39, 114, 40);</span>
+<span class="nc" id="L78">		tfInput.setColumns(10);</span>
+
+<span class="nc" id="L80">		lblInstructionChoose.setBounds(79, 93, 300, 25);</span>
+<span class="nc" id="L81">		lblInformation.setBounds(149, 259, 114, 25);</span>
+
+<span class="nc" id="L83">		tfOutput.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L84">		tfOutput.setFont(new Font(&quot;Dialog&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L85">		tfOutput.setBounds(119, 296, 169, 47);</span>
+<span class="nc" id="L86">		tfOutput.setColumns(10);</span>
+
+<span class="nc" id="L88">		btnMm.setBounds(23, 130, 71, 35);</span>
+<span class="nc" id="L89">		btnCm.setBounds(133, 130, 71, 35);</span>
+<span class="nc" id="L90">		btnM.setBounds(250, 130, 71, 35);</span>
+<span class="nc" id="L91">		btnKm.setBounds(357, 130, 71, 35);</span>
+<span class="nc" id="L92">		btnInch.setBounds(23, 199, 71, 35);</span>
+<span class="nc" id="L93">		btnFoot.setBounds(133, 199, 71, 35);</span>
+<span class="nc" id="L94">		btnYard.setBounds(250, 199, 71, 35);</span>
+<span class="nc" id="L95">		btnMile.setBounds(357, 199, 71, 35);</span>
+<span class="nc" id="L96">		frmRknareFrOmvandling.setVisible(true);</span>
+<span class="nc" id="L97">	}</span>
+
+	/**
+	 * metoden addComponents - innehåller samtliga getters för alla egenskaper i
+	 * alla enheter (labels, text fields, buttons).
+	 */
+	public void addComponents() {
+		// adds all properties
+<span class="nc" id="L105">		frmRknareFrOmvandling.getContentPane().setLayout(null);</span>
+<span class="nc" id="L106">		frmRknareFrOmvandling.getContentPane().add(lblInstruction);</span>
+<span class="nc" id="L107">		frmRknareFrOmvandling.getContentPane().add(tfInput);</span>
+<span class="nc" id="L108">		frmRknareFrOmvandling.getContentPane().add(lblInstructionChoose);</span>
+<span class="nc" id="L109">		frmRknareFrOmvandling.getContentPane().add(lblInformation);</span>
+<span class="nc" id="L110">		frmRknareFrOmvandling.getContentPane().add(tfOutput);</span>
+<span class="nc" id="L111">		frmRknareFrOmvandling.getContentPane().add(btnMm);</span>
+<span class="nc" id="L112">		frmRknareFrOmvandling.getContentPane().add(btnCm);</span>
+<span class="nc" id="L113">		frmRknareFrOmvandling.getContentPane().add(btnM);</span>
+<span class="nc" id="L114">		frmRknareFrOmvandling.getContentPane().add(btnKm);</span>
+<span class="nc" id="L115">		frmRknareFrOmvandling.getContentPane().add(btnInch);</span>
+<span class="nc" id="L116">		frmRknareFrOmvandling.getContentPane().add(btnFoot);</span>
+<span class="nc" id="L117">		frmRknareFrOmvandling.getContentPane().add(btnYard);</span>
+<span class="nc" id="L118">		frmRknareFrOmvandling.getContentPane().add(btnMile);</span>
+
+<span class="nc" id="L120">	}</span>
+
+	/**
+	 * metod addActionListeners - innehåller samtliga metoder för aktiviteter
+	 * baserade på knapptryckning.
+	 * Förutsätter numerisk inmatning - finns ingen implementation för att hantera ickenumerisk inmatning.
+	 * 
+	 * 
+	 */
+	public void addActionListeners() {
+		
+<span class="nc" id="L131">		btnMm.addActionListener(new ActionListener() {</span>
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L135">				double inputValue = Double.parseDouble(tfInput.getText().toString());</span>
+<span class="nc" id="L136">				double result = c.mToMm(inputValue);</span>
+<span class="nc" id="L137">				tfOutput.setText(result + &quot; mm&quot;);</span>
+<span class="nc" id="L138">			}</span>
+		});
+
+<span class="nc" id="L141">		btnCm.addActionListener(new ActionListener() {</span>
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L145">				double inputValue = Double.parseDouble(tfInput.getText().toString());</span>
+<span class="nc" id="L146">				double result = c.mToCm(inputValue);</span>
+<span class="nc" id="L147">				tfOutput.setText(result + &quot; cm&quot;);</span>
+<span class="nc" id="L148">			}</span>
+		});
+
+<span class="nc" id="L151">		btnM.addActionListener(new ActionListener() {</span>
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L155">				double inputValue = Double.parseDouble(tfInput.getText().toString());</span>
+<span class="nc" id="L156">				double result = c.mToM(inputValue);</span>
+<span class="nc" id="L157">				tfOutput.setText(result + &quot; m&quot;);</span>
+<span class="nc" id="L158">			}</span>
+		});
+
+<span class="nc" id="L161">		btnKm.addActionListener(new ActionListener() {</span>
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L165">				double inputValue = Double.parseDouble(tfInput.getText().toString());</span>
+<span class="nc" id="L166">				double result = inputValue * 0.001;</span>
+<span class="nc" id="L167">				tfOutput.setText(result + &quot; km&quot;);</span>
+<span class="nc" id="L168">			}</span>
+		});
+
+<span class="nc" id="L171">		btnInch.addActionListener(new ActionListener() {</span>
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L175">				double inputValue = Double.parseDouble(tfInput.getText().toString());</span>
+<span class="nc" id="L176">				double result = c.mToInch(inputValue);</span>
+<span class="nc" id="L177">				tfOutput.setText(result + &quot; inch&quot;);</span>
+<span class="nc" id="L178">			}</span>
+		});
+
+<span class="nc" id="L181">		btnFoot.addActionListener(new ActionListener() {</span>
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L185">				double inputValue = Double.parseDouble(tfInput.getText().toString());</span>
+<span class="nc" id="L186">				double result = c.mToFoot(inputValue);</span>
+<span class="nc" id="L187">				tfOutput.setText(result + &quot; foot&quot;);</span>
+<span class="nc" id="L188">			}</span>
+		});
+
+<span class="nc" id="L191">		btnYard.addActionListener(new ActionListener() {</span>
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L195">				double inputValue = Double.parseDouble(tfInput.getText().toString());</span>
+<span class="nc" id="L196">				double result = c.mToYard(inputValue);</span>
+<span class="nc" id="L197">				tfOutput.setText(result + &quot; yard&quot;);</span>
+<span class="nc" id="L198">			}</span>
+		});
+
+<span class="nc" id="L201">		btnMile.addActionListener(new ActionListener() {</span>
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L205">				double inputValue = Double.parseDouble(tfInput.getText().toString());</span>
+<span class="nc" id="L206">				double result = c.mToMile(inputValue);</span>
+<span class="nc" id="L207">				tfOutput.setText(result + &quot; mile&quot;);</span>
+<span class="nc" id="L208">			}</span>
+		});
+<span class="nc" id="L210">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

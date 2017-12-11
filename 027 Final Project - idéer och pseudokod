@@ -1,0 +1,119 @@
+projektnamn: 
+measurement-calculator-annamajal
+
+namn till github: 
+measurement-calculator-annamajal
+------------------------------------
+
+Övergripande: 
+en räknare som ger dig möjlighet att omvandla ett värde angett i meter till andra måttenheter.
+
+Övergripande om uppgiften: 
+StarUML
+Maven-projekt
+Javadoc
+Git Hub - branches, etc
+GUI
+Sorterad kod i separata metoder utifrån autogenererad kod.
+Tester till alla metoder: 100% coverage + random-genererad input 50 varv.
+
+Klasser, se nedan
+
+------------------------------------
+
+Layout, uppifrån och ner: 
+
+Mata in värde i m
+Inmatning med siffror från tangentbord.
+
+Label "Resultat":
+Label utrymme för att displaya omräknat värde + måttenhet. 
+
+Knappar längst ner: 
+mm, cm, m, km
+inch, foot, yard, mile
+			//// LAYOUTEN ÄR KLAR
+-----------------------
+
+Klasser: 
+
+interface InterfaceCalculateMeasure 
+tomma beräkningsmetoder:
+
+mToMm - return result
+mToCm - return result 
+mToM  - return result
+mToKm - return result
+mToInch  - return result
+mToFoot  - return result
+mToYard  - return result
+mToMile  - return result
+
+				///// INTERFACE ÄR KLAR
+---------------------------
+Class CalculateMeasure
+extends InterfaceCalculateMeasure
+
+variabler: 
+double inputValue
+
+set/get double inputValue
+
+beräkningsmetoder: // ärvs från interfacen och implementeras här.
+mToMm = *1000
+mToCm = *100
+mToM = *1
+mToKm = *0.001
+mToInch = *39.37
+mToFoot = *3,281
+mToYard = *1,094
+mToMile = *0.0006216
+
+				//// CALCULATEMEASURE ÄR KLAR
+
+----------------------------
+Class GUI_CalculateMeasure
+
+konstruktorer
+globala variabler: double inputValue
+
+metod initialize - sets frame, lbls, btns
+
+metod addComponents - gets frame, lbls, btns
+
+metod addActionListener - 
+separata actions för varje knapp.
+- anrop av metod med inputValue
+- svaret skall till tfOutput
+- lblUnit skall få texten vald måttenhet
+
+/////////////////////////////////////
+
+GUI layout: 
+
+---Frame: 
+lämplig rubrik.
+---Labels: 
+instruktion om input
+instruktion om val
+information om slutvärde
+vald enhet (från knapp)
+---Textfield: 
+för input av värde i m
+---Buttons: 
+mm, cm, m, km, inch, foot, yard, mile
+				//// LAYOUTEN ÄR KLAR
+/////////////////////////////////////
+
+
+
+------------------------------
+MainToMeasurements
+
+Main-klass. Anropar alla metoder som skall köras.
+initialize
+addComponents
+addActionListener
+
+				//// MAIN ÄR KLAR
+				

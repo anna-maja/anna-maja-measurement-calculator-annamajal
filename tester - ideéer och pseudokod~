@@ -1,0 +1,25 @@
+Tester till measurement-calculator
+
+------------------------------
+testSetGetInputValueKeyboard
+
+testar att mata in något, kollar så värdet lagras och returneras.
+set/get inputValueKeyboard
+
+-----------------------------
+testSetGetInputUnitButton
+?????
+set/get inputUnitButton 
+
+
+-----------------------------
+TestCalculateMeasure - i separat klass???
+
+testToMm
+testToCm
+testToM 
+testToKm
+testToInch 
+testToFoot 
+testToYard 
+testToMile 
