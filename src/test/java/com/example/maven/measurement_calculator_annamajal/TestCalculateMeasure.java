@@ -41,7 +41,7 @@ public class TestCalculateMeasure {
 	}
 
 	public double localToM(double localValue) {
-		localResult = localValue *1;
+		localResult = localValue * 1;
 		return localResult;
 	}
 
@@ -85,115 +85,110 @@ public class TestCalculateMeasure {
 			LOG.info(localToMm(randomValue) + " == " + c.mToMm(randomValue));
 		}
 	}
-	
+
 	// testmetod för mToCm. 100% coverage.
-		@Test
-		public void testMToCm() {
+	@Test
+	public void testMToCm() {
 
-			double randomValue = 0.0;
+		double randomValue = 0.0;
 
-			for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 50; i++) {
 
-				randomValue = random.nextDouble() * 10;
-				LOG.info("Testing the method mToCm with " + randomValue);
-				assertEquals(localToCm(randomValue), c.mToCm(randomValue), 0.01);
-				LOG.info(localToCm(randomValue) + " == " + c.mToCm(randomValue));
-			}
+			randomValue = random.nextDouble() * 10;
+			LOG.info("Testing the method mToCm with " + randomValue);
+			assertEquals(localToCm(randomValue), c.mToCm(randomValue), 0.01);
+			LOG.info(localToCm(randomValue) + " == " + c.mToCm(randomValue));
 		}
+	}
 
-		// testmetod för mToM. 100% coverage.
-			@Test
-			public void testMToM() {
+	// testmetod för mToM. 100% coverage.
+	@Test
+	public void testMToM() {
 
-				double randomValue = 0.0;
+		double randomValue = 0.0;
 
-				for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 50; i++) {
 
-					randomValue = random.nextDouble() * 10;
-					LOG.info("Testing the method mToM with " + randomValue);
-					assertEquals(localToM(randomValue), c.mToM(randomValue), 0.01);
-					LOG.info(localToM(randomValue) + " == " + c.mToM(randomValue));
-				}
-			}
-			
+			randomValue = random.nextDouble() * 10;
+			LOG.info("Testing the method mToM with " + randomValue);
+			assertEquals(localToM(randomValue), c.mToM(randomValue), 0.01);
+			LOG.info(localToM(randomValue) + " == " + c.mToM(randomValue));
+		}
+	}
 
-			// testmetod för mToKm. 100% coverage.
-				@Test
-				public void testMToKm() {
+	// testmetod för mToKm. 100% coverage.
+	@Test
+	public void testMToKm() {
 
-					double randomValue = 0.0;
+		double randomValue = 0.0;
 
-					for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 50; i++) {
 
-						randomValue = random.nextDouble() * 10;
-						LOG.info("Testing the method mToKm with " + randomValue);
-						assertEquals(localToKm(randomValue), c.mToKm(randomValue), 0.1);
-						LOG.info(localToKm(randomValue) + " == " + c.mToKm(randomValue));
-					}
-				}
-				
+			randomValue = random.nextDouble() * 10;
+			LOG.info("Testing the method mToKm with " + randomValue);
+			assertEquals(localToKm(randomValue), c.mToKm(randomValue), 0.1);
+			LOG.info(localToKm(randomValue) + " == " + c.mToKm(randomValue));
+		}
+	}
 
-				// testmetod för mToInch. 100% coverage.
-					@Test
-					public void testMToInch() {
+	// testmetod för mToInch. 100% coverage.
+	@Test
+	public void testMToInch() {
 
-						double randomValue = 0.0;
+		double randomValue = 0.0;
 
-						for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 50; i++) {
 
-							randomValue = random.nextDouble() * 10;
-							LOG.info("Testing the method mToInch with " + randomValue);
-							assertEquals(localToInch(randomValue), c.mToInch(randomValue), 0.01);
-							LOG.info(localToInch(randomValue) + " == " + c.mToInch(randomValue));
-						}
-					}
+			randomValue = random.nextDouble() * 10;
+			LOG.info("Testing the method mToInch with " + randomValue);
+			assertEquals(localToInch(randomValue), c.mToInch(randomValue), 0.01);
+			LOG.info(localToInch(randomValue) + " == " + c.mToInch(randomValue));
+		}
+	}
 
-					// testmetod för mToFoot. 100% coverage.
-					@Test
-					public void testMToFoot() {
+	// testmetod för mToFoot. 100% coverage.
+	@Test
+	public void testMToFoot() {
 
-						double randomValue = 0.0;
+		double randomValue = 0.0;
 
-						for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 50; i++) {
 
-							randomValue = random.nextDouble() * 10;
-							LOG.info("Testing the method mToFoot with " + randomValue);
-							assertEquals(localToFoot (randomValue), c.mToFoot (randomValue), 0.01);
-							LOG.info(localToFoot(randomValue) + " == " + c.mToFoot(randomValue));
-						}
-					}
+			randomValue = random.nextDouble() * 10;
+			LOG.info("Testing the method mToFoot with " + randomValue);
+			assertEquals(localToFoot(randomValue), c.mToFoot(randomValue), 0.01);
+			LOG.info(localToFoot(randomValue) + " == " + c.mToFoot(randomValue));
+		}
+	}
 
-					// testmetod för mToYard. 100% coverage.
-					@Test
-					public void testMToYard() {
+	// testmetod för mToYard. 100% coverage.
+	@Test
+	public void testMToYard() {
 
-						double randomValue = 0.0;
+		double randomValue = 0.0;
 
-						for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 50; i++) {
 
-							randomValue = random.nextDouble() * 10;
-							LOG.info("Testing the method mToYard with " + randomValue);
-							assertEquals(localToYard(randomValue), c.mToYard(randomValue), 0.01);
-							LOG.info(localToYard(randomValue) + " == " + c.mToYard(randomValue));
-						}
-					}
+			randomValue = random.nextDouble() * 10;
+			LOG.info("Testing the method mToYard with " + randomValue);
+			assertEquals(localToYard(randomValue), c.mToYard(randomValue), 0.01);
+			LOG.info(localToYard(randomValue) + " == " + c.mToYard(randomValue));
+		}
+	}
 
-					// testmetod för mToMile. 100% coverage.
-					@Test
-					public void testMToMile() {
+	// testmetod för mToMile. 100% coverage.
+	@Test
+	public void testMToMile() {
 
-						double randomValue = 0.0;
+		double randomValue = 0.0;
 
-						for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 50; i++) {
 
-							randomValue = random.nextDouble() * 10;
-							LOG.info("Testing the method mToMile with" + randomValue);
-							assertEquals(localToMile(randomValue), c.mToMile(randomValue), 0.01);
-							LOG.info(localToMile(randomValue) + " == " + c.mToMile(randomValue));
-						}
-					}
-					
-
-
+			randomValue = random.nextDouble() * 10;
+			LOG.info("Testing the method mToMile with" + randomValue);
+			assertEquals(localToMile(randomValue), c.mToMile(randomValue), 0.01);
+			LOG.info(localToMile(randomValue) + " == " + c.mToMile(randomValue));
+		}
+	}
 
 }
